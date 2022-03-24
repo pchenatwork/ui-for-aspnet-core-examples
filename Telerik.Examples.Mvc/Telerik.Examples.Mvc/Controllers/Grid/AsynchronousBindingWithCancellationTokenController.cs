@@ -26,7 +26,8 @@ namespace Telerik.Examples.Mvc.Controllers.Grid
             CancellationTokenSource source = new CancellationTokenSource(2000);
             CancellationToken token = source.Token;
 
-            var result = await GetOrders().ToDataSourceResultAsync(request, token);
+            ///var result = await GetOrders().ToDataSourceResultAsync(request, token);
+            var result = await GetOrders().ToDataSourceResultAsync(request);
             return Json(result);
         }
 
